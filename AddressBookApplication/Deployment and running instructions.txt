@@ -1,0 +1,32 @@
+//In order to run this project,
+1. Import the project into Eclipse as an existing Android project
+2. This project has two dependent libraries: android-support-v7-appcompat and google-play-services_lib
+
+
+To make the Google Play services APIs available to this app:
+
+1. Copy the library project at <android-sdk>/extras/google/google_play_services/libproject/google-play-services_lib/ to the location where you maintain 
+	your Android app projects.
+2. Import the library project into your Eclipse workspace. Click File > Import, select Android > Existing Android Code into Workspace, and browse to 
+	the copy of the library project to import it.
+	
+To make android-support-v7-appcompat library available to this app:
+1. Import the library project at <android-sdk>/extras/android/support/v7/appcompat into your Eclipse workspace as a existing Android project.
+	(Click File > Import, select Android > Existing Android Code into Workspace).
+2. Reference this library project in this application.
+	
+In order to reference library project, follow the instructions on the link below:
+	http://developer.android.com/tools/projects/projects-eclipse.html#ReferencingLibraryProject
+	
+-------------------------------
+Building a signed version of this application:
+
+There is a file in the root of this directory called 'AddressBookApp' which is the keystore file for this application.
+This keystore is essential because the key secrete in this keystore is used in the developer console to get auth token when required. 
+Without this, you might not be able to use the application as expected.
+
+A final release version of this APK is available on the root folder. 
+The file is called 'AddressBookApplication - Release.apk'. This file can be copied onto your phone's SD card and can be installed directly.
+
+In order to deploy this application to a cloud infastructure, you can either build a signed APK and upload it to google play store OR,
+use software such as Mobi to push it to specific android devices.

@@ -1,0 +1,26 @@
+Summary:
+
+The general approach:
+I'm using Google+ authentication to get the auth token from the google server and then using that auth token, I'm able to get the list of contacts using an async task.
+I use Async Task to get the contact list because we don't want to overload the UI thread as it may crash the application.
+
+Features:
+After spending 5 hours on this project, I was able to:
+1. Get auth token from Google
+2. Get contact list from Google server using your Gmail account
+3. Able to get Name, Phone number and Contact Photo link
+4. Implemented code to download the Contact Photo from the link but not display on the UI.
+4. Display Name and Phone number in an ListView on the application
+
+Given more time, what would I improve:
+1. I'd implement the Contact Photo feature so that the application downloads the photo from the link and cache it locally to use.
+2. I'd do pagination, currently, the program gets the first 50 contacts from Google, however, I could've implemented pagination such that the user can get their whole contact list.
+3. I'd cache all information and store it in a local SqlLite database such that the code doens't always download contacts. It can lookup locally.
+	I'd also have to implement a way to refresh stale data incase the information locally is different than what's on the google servers.
+4. I'd implement caching such that not all contacts and images are loaded in memory at once.
+ 
+This would take me 2-3 days to finish.
+
+Given more time, how can I make this code robust:
+1. I'd check if the phone had an established Internet connection, and better error handling in that case.
+2. I'd improve error handling in general.
